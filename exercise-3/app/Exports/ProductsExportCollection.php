@@ -13,7 +13,7 @@ class ProductsExportCollection implements FromCollection
     public function collection()
     {
         // return Product::all();
-        return Product::select('id', 'name', 'price', 'stock')
+        return Product::select('id', 'name', 'excerpt', 'price', 'stock')
             ->orderByDesc('id')
             ->get();
     }
